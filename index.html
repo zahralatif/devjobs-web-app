@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles/reset.css" />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Devjobs Web App</title>
+  </head>
+  <body>
+    <!-- navbar start -->
+    <nav class="navbar">
+      <div class="navbar-detail navbar-triangle-1">
+        <img src="./assets/images/Triangle Copy 2.svg" alt="" />
+      </div>
+      <div class="navbar-detail navbar-triangle-2">
+        <img src="./assets/images/Triangle Copy.svg" alt="" />
+      </div>
+      <div class="navbar-detail navbar-triangle-3">
+        <img src="./assets/images/Triangle.svg" alt="" />
+      </div>
+      <div class="container">
+        <div class="nav-section">
+          <div class="nav-block_logo">
+            <img src="./assets/images/devjobs.svg" alt="" />
+          </div>
+          <div class="nav-section_theme-switch">
+            <label for="checking-theme">
+              <i class="bx bxs-sun theme-icon" style="color: #fff"></i>
+            </label>
+            <input
+              id="checking-theme"
+              class="nav-section_theme-check"
+              type="checkbox"
+            />
+            <label for="checking-theme">
+              <i class="bx bxs-moon theme-icon" style="color: #fff"></i>
+            </label>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- filter, search input start -->
+    <section class="field">
+      <div class="container">
+        <div class="field-container">
+          <form action="#" class="field-form">
+            <div class="field-form-group">
+              <label for="job-head">
+                <i class="bx bx-search field-icon"></i>
+                <input
+                  id="job-head"
+                  class="field-form-input"
+                  type="text"
+                  placeholder="Filter by title, companies, expertise…"
+                />
+              </label>
+            </div>
+            <div class="field-form-group">
+              <label for="job-location">
+                <i class="bx bxs-map field-icon"></i>
+                <input
+                  id="job-location"
+                  class="field-form-input"
+                  type="text"
+                  placeholder="Filter by location…"
+                />
+              </label>
+            </div>
+
+            <div class="field-form-group">
+              <label for="job-type">
+                <input id="job-type" class="field-form-check" type="checkbox" />
+                <span class="field-form_checking">Full Time Only</span>
+              </label>
+              <button type="submit" class="button button-default">
+                Search
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- filter, search input end -->
+
+    <!-- jobs start -->
+    <main class="jobs">
+      <div class="container">
+        <div class="jobs-section">
+          <div class="jobs-item">
+            <div class="jobs-item_image">
+              <img src="./assets/images/job_ex.svg" alt="" />
+            </div>
+            <div class="jobs-item_container">
+              <div class="jobs-item_details">
+                <p>5h ago</p>
+                <div class="oval">
+                    <img src="./assets/images/Oval.svg" alt="">
+                </div>
+                <p>Full Time</p>
+              </div>
+              <a href="/job-details.html" class="jobs-item_info">
+                Senior Software Engineer
+              </a>
+              <div class="jobs-item_company">Scoot</div>
+            </div>
+            <div class="jobs-item_footer">
+              <p class="jobs-item_location">United Kingdom</p>
+            </div>
+          </div>
+        </div>
+        <div class="jobs-footer">
+          <button class="button button-default">Load More</button>
+        </div>
+      </div>
+    </main>
+    <!-- jobs end -->
+
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
