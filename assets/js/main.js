@@ -18,22 +18,76 @@ const data = [
     },
     {
         id: 2,
-        title: 'Senior Software Developer',
+        title: 'Haskell and PureScript Dev',
         image: './assets/images/job_ex.svg',
-        time: '13h ago',
-        workType: 'Full Time',
-        company: 'Scoot',
+        time: '20h ago',
+        workType: 'Part Time',
+        company: 'Blogr',
         location: 'United States'
     },
     {
         id: 3,
-        title: 'Middle Software Engineer',
+        title: 'Midlevel Back End Engineer ',
         image: './assets/images/job_ex.svg',
-        time: '22h ago',
+        time: '1d ago',
+        workType: 'Part Time',
+        company: 'Vector',
+        location: 'Russia'
+    }, 
+    {
+        id: 4,
+        title: 'Senior Application Engineer',
+        image: './assets/images/job_ex.svg',
+        time: '2d ago',
         workType: 'Full Time',
-        company: 'Scoot',
+        company: 'Office Lite',
+        location: 'Japan'
+    }, 
+    {
+        id: 5,
+        title: 'Remote DevOps Engineer',
+        image: './assets/images/job_ex.svg',
+        time: '2d ago',
+        workType: 'Part Time',
+        company: 'Pod',
+        location: 'Thailand'
+    }, 
+    {
+        id: 6,
+        title: 'Desktop Support Manager',
+        image: './assets/images/job_ex.svg',
+        time: '4d ago',
+        workType: 'Part Time',
+        company: 'Creative',
+        location: 'Germany'
+    }, 
+    {
+        id: 7,
+        title: 'iOS Engineer',
+        image: './assets/images/job_ex.svg',
+        time: '1w ago',
+        workType: 'Full Time',
+        company: 'Pomodoro',
+        location: 'United States'
+    }, 
+    {
+        id: 8,
+        title: 'Senior EJB Developer',
+        image: './assets/images/job_ex.svg',
+        time: '1w ago',
+        workType: 'Full Time',
+        company: 'Maker',
         location: 'United Kingdom'
-    },
+    }, 
+    {
+        id: 9,
+        title: 'Senior Frontend Developer',
+        image: './assets/images/job_ex.svg',
+        time: '1w ago',
+        workType: 'Part Time',
+        company: 'Coffeeroasters',
+        location: 'Singapore'
+    }, 
 ]
 
 function getData(data) {
@@ -65,7 +119,7 @@ function getData(data) {
         `
     })
 
-    jobsSection?.innerHTML = dataHtml;
+    jobsSection.innerHTML = dataHtml;
 }
 
 getData(data);
@@ -108,13 +162,13 @@ jobsTitle?.addEventListener('keyup', (e) => {
 })
 
 jobsLocation?.addEventListener('keyup', (e) => {
-    result = search(e.target.value, "location", data);
+    result = search(e.target.value, "location", result);
     getData(result);
 })
 
 jobsType?.addEventListener('click', (e) => {
     if (e.target.checked) {
-        result = search('Full Time', 'workType', data);
+        result = search('Full Time', 'workType', result);
         getData(result);
     } else {
         getData(data);
